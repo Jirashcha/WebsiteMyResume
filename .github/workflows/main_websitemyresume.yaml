@@ -1,0 +1,35 @@
+name: Deploy Website to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      
+      - name: Setup Pages
+        uses: actions/setup-pages@v2
+      
+      - name: Build and deploy
+        run: |
+          mkdir -p docs
+          cp -r * docs/
+          cp -r .[^.]* docs/
+          
+          # Set the main page of your website
+          echo "home.html" > docs/home.html
+          
+          # Optionally you can copy files to docs folder
+          # For example, if you have specific build steps, include them here
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
