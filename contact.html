@@ -4,46 +4,164 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Jirashcha's Resume</title>
+        <title>Jirashcha's Contact</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f9f9f9;
+            }
+
+            h1, h3 {
+                color: #333;
+            }
+
+            p, li {
+                color: #555;
+                line-height: 1.6;
+            }
+
+            #desktop-nav {
+                background-color: #333;
+                padding: 10px;
+            }
+
+            .nav-links {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+            }
+
+            .nav-links th {
+                padding: 0 15px;
+                text-align: center;
+            }
+
+            .nav-links a {
+                text-decoration: none;
+                font-weight: bold;
+                font-size: 18px;
+            }
+
+            .cur-link {
+                color: #ffae00;
+            }
+
+            .next-links {
+                color: white;
+            }
+
+            .nav-links a:hover {
+                color: #ffcc00;
+            }
+
+            #contact {
+                padding: 20px;
+                background-color: #fff;
+                border-radius: 8px;
+                width: 60%;
+                margin: 20px auto;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                text-align: center;
+            }
+
+            #contact ul {
+                list-style-type: disc;
+                padding: 10;
+                font-size: 16px;
+                text-align: left;
+            }
+
+            #contact li {
+                margin: 10px 0;
+            }
+
+            form {
+                width: 60%;
+                margin: 0 auto;
+                padding: 20px;
+                background-color: #fff;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+
+            label {
+                font-size: 16px;
+                font-weight: bold;
+                display: block;
+                margin-bottom: 5px;
+                color: #5d6263
+            }
+
+            input[type="text"], textarea {
+                width: 97%;
+                padding: 10px;
+                margin-bottom: 20px;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+            }
+
+            button {
+                padding: 10px 20px;
+                margin-right: 10px;
+                background-color: #333;
+                color: white;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+
+            button:hover {
+                background-color: #6fe76f;
+                color: #333;
+            }
+
+        </style>
     </head>
     <body>
         <nav id="desktop-nav">
             <div>
-              <table class="nav-links">
-                <thead>
-                    <tr>
-                        <th><a href="home.html"> Home </a></th>
-                        <th> | </th>
-                        <th><a href="education.html"> Education </a></th>
-                        <th> | </th>
-                        <th><a href="work.html"> Experience </a></th>
-                        <th> | </th>
-                        <th><a href="contact.html"> Contact </a></th>
-                    </tr>
-                </thead>
-              </table>
+                <table class="nav-links">
+                    <thead>
+                        <tr>
+                            <th><a href="home.html" class="next-links">Home</a></th>
+                            <th>|</th>
+                            <th><a href="education.html" class="next-links">Education</a></th>
+                            <th>|</th>
+                            <th><a href="work.html" class="next-links">Experience</a></th>
+                            <th>|</th>
+                            <th><a href="contact.html" class="cur-link">Contact</a></th>
+                        </tr>
+                    </thead>
+                </table>
             </div>
         </nav>
-        <hr class="styled-hr">
         <section id="contact">
             <h1 class="title">Contact Me</h1>
+        </section>
+        <section id="contact">
             <ul>
                 <li>Bangkok, Thailand</li>
                 <li>065-095-1995</li>
                 <li>jirashcha.wang@gmail.com</li>
             </ul>
-            <hr class="styled-hr">
         </section>
         <form>
-            <h3 class="title">Enter your info</h3>
-            <label for="name">Your Name</label><br>
-            <input type="text" name="name" id="name"><br>
-            <label for="name">Your Email</label><br>
-            <input type="text" name="email" id="email"><br>
-            <label for="name">Message</label><br>
-            <textarea name="message" id="message" rows="10" cols="40"></textarea><br>
-            <button type="send">Send</button>
-            <button type="clear">Clear</button>
+            <h3 class="title">Enter your Information</h3>
+            <label for="name">Your Name</label>
+            <input type="text" name="name" id="name">
+
+            <label for="email">Your Email</label>
+            <input type="text" name="email" id="email">
+
+            <label for="message">Message</label>
+            <textarea name="message" id="message" rows="10" cols="40"></textarea>
+
+            <button type="submit">Send</button>
+            <button type="reset">Clear</button>
         </form>
     </body>
 </html>

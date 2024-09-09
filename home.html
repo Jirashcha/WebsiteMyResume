@@ -5,59 +5,164 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Jirashcha's Resume</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f9f9f9;
+            }
+
+            h1, h3 {
+                color: #333;
+            }
+
+            p, li {
+                color: #555;
+                line-height: 1.6;
+            }
+
+            #desktop-nav {
+                background-color: #333;
+                padding: 10px;
+            }
+
+            .nav-links {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+            }
+
+            .nav-links li {
+                display: inline;
+                padding: 0 15px;
+            }
+
+            .nav-links a {
+                text-decoration: none;
+                font-weight: bold;
+                font-size: 18px;
+            }
+
+            .cur-link {
+                color: #ffae00;
+            }
+
+            .next-links {
+                color: white;
+            }
+
+            .nav-links a:hover {
+                color: #ffae00;
+            }
+
+            #profile {
+                padding: 20px;
+                background-color: #fff;
+                border-radius: 8px;
+                width: 80%;
+                margin: 20px auto;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+
+            #profile img {
+                border-radius: 50%;  
+            }
+
+            #profile .title {
+                font-size: 28px;
+                color: #2c3e50;
+            }
+
+            #profile .section__text__p2 {
+                font-size: 18px;
+                color: #7f8c8d;
+            }
+
+            #socials-container {
+                margin-top: 10px;
+            }
+
+            .icon {
+                margin-right: 10px;
+                cursor: pointer;
+                transition: transform 0.2s;
+            }
+
+            .icon:hover {
+                transform: scale(1.1);
+            }
+
+            #info {
+                padding: 20px;
+                background-color: #fff;
+                border-radius: 8px;
+                width: 80%;
+                margin: 20px auto;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+
+            #info .title {
+                font-size: 24px;
+                color: #2c3e50;
+            }
+
+            #info ul {
+                list-style-type: disc;
+                padding-left: 20px;
+            }
+
+            #info li {
+                margin-bottom: 10px;
+                font-size: 16px;
+                text-align: left;
+            }
+        </style>
     </head>
     <body>
         <nav id="desktop-nav">
-            <div>
-              <table class="nav-links">
-                <thead>
-                    <tr>
-                        <th><a href="home.html"> Home </a></th>
-                        <th> | </th>
-                        <th><a href="education.html"> Education </a></th>
-                        <th> | </th>
-                        <th><a href="work.html"> Experience </a></th>
-                        <th> | </th>
-                        <th><a href="contact.html"> Contact </a></th>
-                    </tr>
-                </thead>
-              </table>
-            </div>
+            <ul class="nav-links">
+                <li><a href="home.html" class="cur-link">Home</a></li>
+                <li>|</li>
+                <li><a href="education.html" class="next-links">Education</a></li>
+                <li>|</li>
+                <li><a href="work.html" class="next-links">Experience</a></li>
+                <li>|</li>
+                <li><a href="contact.html" class="next-links">Contact</a></li>
+            </ul>
         </nav>
-        <hr class="styled-hr">
         <section id="profile">
             <table>
                 <tr>
                     <td>
-                        <img src="img\profile.png" alt="Jirashcha profile picture" width="250" height="250" />
+                        <img src="img/profile.png" alt="Jirashcha profile picture" width="250" height="250" />
                     </td>
-                    <td>
+                    <td style="padding-left: 20px;">
                         <h1 class="title">Jirashcha Wanggum</h1>
                         <h3 class="section__text__p2">Data Engineer</h3>
                         <p class="section__text__p2">Fourth-year Computer Science - Data Science and Cybersecurity student, interested in Data Engineering, with experience as a Junior Software Developer intern at Center of Specialty Innovation (CoSI).</p>
                         <div id="socials-container">
-                            <div id="socials-container" >
-                                <img
-                                  src="img\linkedin.png"
-                                  alt="My LinkedIn profile"
-                                  width="50" height="50"
-                                  class="icon"
-                                  onclick="location.href='https://www.linkedin.com/in/jirashcha/'"
-                                />
-                                <img
-                                  src="img\github.png"
-                                  alt="My Github profile"
-                                  width="50" height="50"
-                                  class="icon"
-                                  onclick="location.href='https://github.com/Jirashcha'"
-                                />
-                              </div>
+                            <img
+                              src="img/linkedin.png"
+                              alt="My LinkedIn profile"
+                              width="50" height="50"
+                              class="icon"
+                              onclick="location.href='https://www.linkedin.com/in/jirashcha/'"
+                            />
+                            <img
+                              src="img/github.png"
+                              alt="My Github profile"
+                              width="50" height="50"
+                              class="icon"
+                              onclick="location.href='https://github.com/Jirashcha'"
+                            />
                         </div>
                     </td>     
                 </tr>
             </table>
         </section>
-        <hr class="styled-hr">
         <section id="info">
             <table>
                 <tr>
@@ -69,7 +174,6 @@
                             <li>Java</li>
                             <li>SQL</li>
                             <li>Scala</li>
-                            <li>SQL</li>
                             <li>Bash</li>
                             <li>Git</li>
                             <li>ETL/ELT</li>
@@ -81,11 +185,19 @@
                         </ul>
                         <h3 class="section__text__p2">Certifications</h3>
                         <ul>
+                            <li>Microsoft Learn Student Ambassador</li>
                             <li>Data Engineering Bootcamp (Skooldio)</li>
+                            <li>Mastering Looker Studio (Skooldio)</li>
                         </ul>
-                        <h3 class="section__text__p2">Awards/Activities</h3>
+                        <h3 class="section__text__p2">Awards</h3>
                         <ul>
-                            <li>Active speaker at 'Python Developer Pathway Be Inspired by Microsoft Learn Student Ambassador', and other workshops at Bangkok University</li>
+                            <li>5th Place in the Prompt Engineers Category at The 2nd ChatGPT4PCG Competition.</li>
+                            <li>Advanced to the Individual Category qualifying round at the Truelab Hackathon x Mordee.</li>
+                        </ul>
+                        <h3 class="section__text__p2">Activities</h3>
+                        <ul>
+                            <li>Build a Development Community Club for Bangkok University Students: Saturday Dev Club.</li>
+                            <li>Active speaker at 'Full-stack web development', and other workshops at Bangkok University.</li>
                             <li>Volunteered at Techsauce Global Summit 2022.</li>
                         </ul>
                     </td>

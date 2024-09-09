@@ -4,7 +4,118 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Jirashcha's Resume</title>
+        <title>Jirashcha's Experience</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f9f9f9;
+            }
+
+            h1, h2, h3 {
+                color: #333;
+            }
+
+            li, td, p {
+                color: #555;
+                line-height: 1.6;
+            }
+
+            #desktop-nav {
+                background-color: #333;
+                padding: 10px;
+            }
+
+            .nav-links {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+            }
+
+            .nav-links th {
+                padding: 0 15px;
+                text-align: center;
+            }
+
+            .nav-links a {
+                text-decoration: none;
+                font-weight: bold;
+                font-size: 18px;
+            }
+
+            .cur-link {
+                color: #ffae00;
+            }
+
+            .next-links {
+                color: white;
+            }
+
+            .nav-links a:hover {
+                color: #ffcc00;
+            }
+
+            .styled-hr {
+                border: 1px solid #ddd;
+                margin: 20px 0;
+            }
+
+            #work {
+                padding: 20px;
+                background-color: #fff;
+                border-radius: 8px;
+                width: 60%;
+                margin: 20px auto;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                text-align: center;
+            }
+
+            #work img {
+                margin-bottom: 20px;
+            }
+
+            #work h1 {
+                text-align: center;
+                font-size: 28px;
+                color: #2c3e50;
+            }
+
+            #work h2 {
+                font-size: 24px;
+                color: #2c3e50;
+                margin-bottom: 10px;
+            }
+
+            #work h3 {
+                font-size: 20px;
+                color: #565d5e
+            }
+
+            #work p {
+                font-size: 16px;
+                color: #555;
+            }
+
+            #work table {
+                width: 100%;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+
+            #work td {
+                padding: 5px;
+                text-align: left;
+            }
+
+            #work ul {
+                list-style-type: disc;
+                font-size: 16px;
+                text-align: left;
+            }
+        </style>
     </head>
     <body>
         <nav id="desktop-nav">
@@ -12,33 +123,69 @@
               <table class="nav-links">
                 <thead>
                     <tr>
-                        <th><a href="home.html"> Home </a></th>
+                        <th><a href="home.html" class="next-links"> Home </a></th>
                         <th> | </th>
-                        <th><a href="education.html"> Education </a></th>
+                        <th><a href="education.html" class="next-links"> Education </a></th>
                         <th> | </th>
-                        <th><a href="work.html"> Experience </a></th>
+                        <th><a href="work.html" class="cur-link"> Experience </a></th>
                         <th> | </th>
-                        <th><a href="contact.html"> Contact </a></th>
+                        <th><a href="contact.html" class="next-links"> Contact </a></th>
                     </tr>
                 </thead>
               </table>
             </div>
         </nav>
         <hr class="styled-hr">
-        <section id="work1">
+        <section id="work">
             <h1 class="title">Work Experience</h1>
-            <img src="img\CoSI.png" alt="UCR logo" width="250" height="100" />
+        </section>
+        <section id="work">
+            <img src="img/CoSI.png" alt="CoSI logo" width="250" height="100" />
             <h2 class="title">Center of Specialty Innovation (CoSI)</h2>
             <hr class="styled-hr">
-            <h3 class="section__text__p2">Research Assistant</h3>
-            <p class="section__text__p2">Aug 2024 - Present</p>
+            <table>
+                <tr>
+                    <td>
+                        <h3>Research Assistant</h3>
+                    </td>
+                    <td style="text-align: right;">
+                        <p>Aug 2024 - Present</p>
+                    </td>
+                </tr>
+            </table>
             <ul>
                 <li>Contribute to the preparation of standard project documentation according to ISO/IEC/IEEE 12207:2017 for the developed software.</li>
             </ul>
-            <h3 class="section__text__p2">Junior Software Developer</h3>
-            <p class="section__text__p2">Oct 2023 - Present</p>
+            <table>
+                <tr>
+                    <td>
+                        <h3>Junior Software Developer</h3>
+                    </td>
+                    <td style="text-align: right;">
+                        <p>Oct 2023 - Present</p>
+                    </td>
+                </tr>
+            </table>
             <ul>
-                <li>Join the team developing software related to drone detection, with responsibilities in AI (deep learning) development and data management.</li>
+                <li>Join the team developing software related to drone detection, with responsibilities in AI (deep learning).</li>
+            </ul>
+        </section>
+        <section id="work">
+            <img src="img/microsoft.png" alt="CoSI logo" width="205" height="210" />
+            <h2 class="title">Microsoft</h2>
+            <hr class="styled-hr">
+            <table>
+                <tr>
+                    <td>
+                        <h3>Microsoft Learn Student Ambassador</h3>
+                    </td>
+                    <td style="text-align: right;">
+                        <p>Oct 2022 - Present</p>
+                    </td>
+                </tr>
+            </table>
+            <ul>
+                <li>Foster a Community and Organize Technical Events.</li>
             </ul>
         </section>
     </body>
